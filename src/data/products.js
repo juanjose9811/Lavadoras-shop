@@ -11,7 +11,7 @@ export const products = [
     capacityKg: 22,
     type: 'Carga frontal',
     energyClass: 'A++',
-    image: 'https://www.lg.com/co/lavadoras-y-secadoras/lavadoras-carga-frontal/wm22vv2s6br/',
+    image: 'https://img.freepik.com/vector-gratis/lavadoras-negras-realistas-arandela-compacta-cargador-frontal_1441-1691.jpg?t=st=1765393511~exp=1765397111~hmac=ca3fcc64cb11bd5d7930acd0be1320f426396d557ae6231c078765d7e88dc798&w=1480',
     features: ['Motor Direct Drive', 'Tecnología TurboWash', 'Vapor Steam+', 'Wi-Fi y control remoto']
   },
   {
