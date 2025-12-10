@@ -11,7 +11,7 @@ export const products = [
     capacityKg: 22,
     type: 'Carga frontal',
     energyClass: 'A++',
-    image: 'https://picsum.photos/seed/lg22/400/300',
+    image: 'https://www.lg.com/co/lavadoras-y-secadoras/lavadoras-carga-frontal/wm22vv2s6br/',
     features: ['Motor Direct Drive', 'Tecnología TurboWash', 'Vapor Steam+', 'Wi-Fi y control remoto']
   },
   {
