@@ -43,11 +43,18 @@ export function AuthProvider({ children }) {
   const [users, setUsers] = useState([]);
   const [currentUser, setCurrentUser] = useState(null);
 
-  // Inicializa usuarios y sesión desde localStorage.
+  // Inicializa usuarios y sesión desde localStorage al montar el contexto.
   useEffect(() => {
     setUsers(loadUsers());
     setCurrentUser(loadSession());
   }, []);
+
+  // 🔑 Nuevo: guarda la sesión cada vez que currentUser cambie.
+  useEffect(() => {
+    if (currentUser) {
+      saveSession(currentUser);
+    }
+  }, [currentUser]);
 
   // Estado derivado: hay sesión activa.
   const isAuthenticated = useMemo(() => !!currentUser, [currentUser]);
@@ -100,3 +107,4 @@ export function AuthProvider({ children }) {
 }
 
 export const useAuth = () => useContext(AuthContext);
+

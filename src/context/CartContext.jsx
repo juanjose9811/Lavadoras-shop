@@ -13,12 +13,12 @@ const initialState = {
 // Reducer puro para manejar acciones sobre el carrito.
 function cartReducer(state, action) {
   switch (action.type) {
-    case 'INIT':
-      return action.payload || initialState;
     case 'ADD': {
       const exists = state.items.find((i) => i.id === action.payload.id);
       const items = exists
-        ? state.items.map((i) => (i.id === action.payload.id ? { ...i, qty: i.qty + 1 } : i))
+        ? state.items.map((i) =>
+            i.id === action.payload.id ? { ...i, qty: i.qty + 1 } : i
+          )
         : [...state.items, { ...action.payload, qty: 1 }];
       return { ...state, items };
     }
@@ -41,13 +41,15 @@ function cartReducer(state, action) {
 }
 
 export function CartProvider({ children }) {
-  const [state, dispatch] = useReducer(cartReducer, initialState);
-
-  // Inicializa estado desde localStorage (persistencia del carrito).
-  useEffect(() => {
-    const saved = localStorage.getItem('cart');
-    if (saved) dispatch({ type: 'INIT', payload: JSON.parse(saved) });
-  }, []);
+  // 🔑 Inicialización directa desde localStorage
+  const [state, dispatch] = useReducer(cartReducer, initialState, () => {
+    try {
+      const saved = localStorage.getItem('cart');
+      return saved ? JSON.parse(saved) : initialState;
+    } catch {
+      return initialState;
+    }
+  });
 
   // Guarda estado del carrito en localStorage en cada cambio.
   useEffect(() => {
@@ -61,7 +63,10 @@ export function CartProvider({ children }) {
   );
 
   // Calcula el conteo de unidades en el carrito.
-  const count = useMemo(() => state.items.reduce((sum, i) => sum + i.qty, 0), [state.items]);
+  const count = useMemo(
+    () => state.items.reduce((sum, i) => sum + i.qty, 0),
+    [state.items]
+  );
 
   // Valor expuesto por el contexto.
   const value = {
@@ -78,3 +83,4 @@ export function CartProvider({ children }) {
 }
 
 export const useCart = () => useContext(CartContext);
+
