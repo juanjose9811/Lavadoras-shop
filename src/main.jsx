@@ -1,3 +1,7 @@
+// Punto de entrada de la app.
+// - Envoltura con BrowserRouter.
+// - Contextos de Auth y Cart disponibles en toda la app.
+
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
