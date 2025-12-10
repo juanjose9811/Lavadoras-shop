@@ -22,7 +22,7 @@ export const products = [
     capacityKg: 19,
     type: 'Carga superior',
     energyClass: 'A+',
-    image: 'https://picsum.photos/seed/samsung19/400/300',
+    image: 'https://img.freepik.com/psd-gratis/lavadora-moderna-carga-superior-blanca_191095-79985.jpg?t=st=1765393668~exp=1765397268~hmac=0b1556fca894a4b418e94681fe4eef326c52a149e5771f569df57a6c7d8c7b7a&w=1480',
     features: ['Motor Digital Inverter', 'Tecnología Wobble', 'Lavado rápido 29 min', 'Panel LED intuitivo']
   },
   {
@@ -33,7 +33,7 @@ export const products = [
     capacityKg: 13,
     type: 'Carga superior',
     energyClass: 'A',
-    image: 'https://picsum.photos/seed/mabe13/400/300',
+    image: 'https://img.freepik.com/vector-gratis/lavadora-fondo-realista-ilustracion-simbolos-equipos-lavanderia_1284-29130.jpg?t=st=1765393757~exp=1765397357~hmac=7a0b3c3a14b4e6c8da31528eed19383a4e8367c8a947369657f2f510afb24ec4&w=1480',
     features: ['Aqua Saver Green', 'Lavado express', 'Tambor inox', 'Bloqueo de seguridad']
   },
   {
@@ -44,7 +44,7 @@ export const products = [
     capacityKg: 18,
     type: 'Carga superior',
     energyClass: 'A++',
-    image: 'https://picsum.photos/seed/whirlpool18/400/300',
+    image: 'https://img.freepik.com/fotos-premium/modelo-lavadora_1263326-62836.jpg?w=1480',
     features: ['Smart Load Sensor', '12 ciclos', 'Tecnología Impeller', 'Inicio diferido']
   },
   {
@@ -55,7 +55,7 @@ export const products = [
     capacityKg: 10,
     type: 'Carga superior',
     energyClass: 'B',
-    image: 'https://picsum.photos/seed/centrales10/400/300',
+    image: 'https://img.freepik.com/psd-gratis/redefine-eficiencia-limpieza-lavadora-carga-superior-electrolux_191095-79971.jpg?t=st=1765393878~exp=1765397478~hmac=57eb290c734da2677d768c3a108a8b8c43715f0f2fcb8e75e381bacd7e711cd4&w=1480',
     features: ['Diseño compacto', 'Panel mecánico', 'Función remojo', 'Ideal espacios pequeños']
   }
 ];
